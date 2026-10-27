@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080914">
+<meta name="description" content="Grow your Telegram channel with professionally managed Meta Ads campaigns, affordable pricing and 24x7 support.">
+<title>Salix Media | Telegram Growth & Meta Ads</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #080914;
+  --purple: #9b5cff;
+  --blue: #4d8dff;
+  --white: #f7f5ff;
+  --muted: #aaa9c3;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--white);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background:
+    radial-gradient(ellipse at 15% 15%,
+      rgba(116, 48, 255, .23), transparent 38%),
+    radial-gradient(ellipse at 90% 35%,
+      rgba(0, 116, 255, .18), transparent 35%),
+    radial-gradient(ellipse at 50% 100%,
+      rgba(124, 45, 255, .12), transparent 40%);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: min(1100px, 90%);
+  margin: auto;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.brand-icon {
+  width: 43px;
+  height: 43px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255,255,255,.22);
+  border-radius: 14px;
+  background: linear-gradient(135deg,
+    rgba(155,92,255,.35),
+    rgba(77,141,255,.15));
+  box-shadow: 0 0 25px rgba(155,92,255,.22);
+  font-size: 22px;
+}
+
+.nav-tag {
+  font-size: 12px;
+  color: #d7c5ff;
+  border: 1px solid rgba(166,124,255,.3);
+  padding: 10px 15px;
+  border-radius: 30px;
+  background: rgba(155,92,255,.08);
+}
+
+.hero {
+  padding: 85px 0 70px;
+  text-align: center;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid rgba(170,139,255,.25);
+  background: rgba(255,255,255,.045);
+  border-radius: 30px;
+  padding: 10px 17px;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  color: #d7c5ff;
+  margin-bottom: 30px;
+  backdrop-filter: blur(12px);
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  background: #8cffc1;
+  border-radius: 50%;
+  box-shadow: 0 0 12px #8cffc1;
+}
+
+h1 {
+  font-size: clamp(38px, 7vw, 76px);
+  line-height: 1.08;
+  letter-spacing: -2.5px;
+  font-weight: 850;
+  max-width: 900px;
+  margin: 0 auto 24px;
+}
+
+.gradient-text {
+  background: linear-gradient(100deg,
+    #c8a8ff 10%, #8c75ff 48%, #65c5ff 95%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 0 22px rgba(141,91,255,.22));
+}
+
+.subtitle {
+  max-width: 650px;
+  margin: auto;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.actions {
+  margin-top: 35px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.btn {
+  min-height: 55px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 0 25px;
+  border-radius: 14px;
+  font-size: 14px;
+  font-weight: 750;
+  transition: .25s ease;
+}
+
+.btn-primary {
+  color: white;
+  background: linear-gradient(105deg, #8250ff, #4f8dff);
+  box-shadow: 0 0 25px rgba(123,80,255,.34),
+              inset 0 1px rgba(255,255,255,.35);
+  border: 1px solid rgba(255,255,255,.25);
+  animation: glow 2.8s infinite alternate;
+}
+
+.btn-secondary {
+  border: 1px solid rgba(255,255,255,.15);
+  background: rgba(255,255,255,.055);
+  color: #e9e7fa;
+  backdrop-filter: blur(15px);
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.12);
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 16px rgba(123,80,255,.3);
+  }
+  to {
+    box-shadow: 0 0 34px rgba(123,80,255,.65),
+                0 0 55px rgba(77,141,255,.16);
+  }
+}
+
+.trust-line {
+  color: #87869f;
+  font-size: 12px;
+  margin-top: 22px;
+}
+
+.section {
+  padding: 48px 0 75px;
+}
+ .section-heading {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.section-heading h2 {
+  font-size: clamp(25px, 4vw, 36px);
+  letter-spacing: -.8px;
+  margin-bottom: 12px;
+}
+
+.section-heading p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.glass-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.105);
+  border-radius: 22px;
+  padding: 27px 23px;
+  background: linear-gradient(145deg,
+    rgba(255,255,255,.085),
+    rgba(255,255,255,.025));
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: inset 0 1px rgba(255,255,255,.06),
+              0 15px 40px rgba(0,0,0,.12);
+  transition: .3s;
+}
+
+.glass-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(163,122,255,.42);
+  box-shadow: 0 12px 40px rgba(111,66,255,.12);
+}
+
+.card-icon {
+  width: 49px;
+  height: 49px;
+  display: grid;
+  place-items: center;
+  font-size: 23px;
+  border-radius: 15px;
+  margin-bottom: 22px;
+  background: linear-gradient(135deg,
+    rgba(155,92,255,.22),
+    rgba(77,141,255,.12));
+  border: 1px solid rgba(166,124,255,.2);
+}
+
+.glass-card h3 {
+  font-size: 17px;
+  margin-bottom: 12px;
+}
+
+.glass-card p {
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--muted);
+}
+
+.process {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.step {
+  padding: 23px 15px;
+  text-align: center;
+  border: 1px solid rgba(255,255,255,.09);
+  background: rgba(255,255,255,.035);
+  border-radius: 17px;
+}
+
+.step-number {
+  color: #bca0ff;
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.step h3 {
+  font-size: 15px;
+  margin-bottom: 9px;
+}
+
+.step p {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.cta-panel {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: 55px 25px;
+  border-radius: 27px;
+  border: 1px solid rgba(169,129,255,.24);
+  background: linear-gradient(135deg,
+    rgba(121,69,255,.16),
+    rgba(49,114,255,.08),
+    rgba(255,255,255,.035));
+  box-shadow: 0 0 60px rgba(108,64,255,.08),
+              inset 0 1px rgba(255,255,255,.1);
+}
+
+.cta-panel h2 {
+  font-size: clamp(27px, 4vw, 39px);
+  margin-bottom: 15px;
+}
+
+.cta-panel p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.8;
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+.cta-panel .btn {
+  margin-top: 27px;
+}
+
+footer {
+  padding: 28px 0;
+  margin-top: 65px;
+  border-top: 1px solid rgba(255,255,255,.08);
+  color: #85849c;
+  font-size: 12px;
+  text-align: center;
+  line-height: 1.9;
+}
+
+footer strong {
+  color: #d6c8ff;
+}
+
+@media (max-width: 700px) {
+  .hero {
+    padding: 60px 0 48px;
+  }
+
+  h1 {
+    letter-spacing: -1.5px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .glass-card {
+    padding: 23px;
+  }
+
+  .process {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: 35px 0 48px;
+  }
+
+  .nav-tag {
+    font-size: 10px;
+    padding: 8px 10px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .actions {
+    padding: 0 8px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+  <nav>
+    <a class="brand" href="#" aria-label="Salix Media home">
+      <span class="brand-icon">✦</span>
+      <span>SALIX <span class="gradient-text">MEDIA</span></span>
+    </a>
+    <span class="nav-tag">META ADS SERVICES</span>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow">
+        <span class="dot"></span>
+        SMART CAMPAIGNS. BETTER STRATEGY.
+      </div>
+
+      <h1>
+        Grow Your Telegram<br>
+        <span class="gradient-text">With Meta Ads</span>
+      </h1>
+
+      <p class="subtitle">
+        Looking to grow your Telegram channel?
+        Get professionally managed Meta Ads campaigns,
+        affordable service packages and responsive support
+        — all in one place.
+      </p>
+ <div class="actions">
+        <a class="btn btn-primary"
+           href="https://t.me/+JYNE1EZKzNEwMDk1"
+           target="_blank"
+           rel="noopener noreferrer">
+          🚀 Join Now <span>↗️</span>
+        </a>
+
+        <a class="btn btn-secondary" href="#services">
+          Explore Our Services ↓
+        </a>
+      </div>
+
+      <p class="trust-line">
+        Affordable Pricing &nbsp; • &nbsp;
+        24×7 Reply Support &nbsp; • &nbsp;
+        Campaign-Focused Approach
+      </p>
+    </section>
+
+    <section class="section" id="services">
+      <div class="section-heading">
+        <h2>Why Choose <span class="gradient-text">Salix Media?</span></h2>
+        <p>Professional service with a focus on your campaign goals.</p>
+      </div>
+
+      <div class="grid">
+        <article class="glass-card">
+          <div class="card-icon">⚡️</div>
+          <h3>Affordable Pricing</h3>
+          <p>
+            Budget-friendly campaign management designed
+            to help you get started without unnecessary complexity.
+          </p>
+        </article>
+
+        <article class="glass-card">
+          <div class="card-icon">🎯</div>
+          <h3>Smart Ad Strategy</h3>
+          <p>
+            Creative testing, audience strategy and campaign
+            optimization based on available performance data.
+          </p>
+        </article>
+
+        <article class="glass-card">
+          <div class="card-icon">💬</div>
+          <h3>24×7 Reply Support</h3>
+          <p>
+            Have a question about your campaign?
+            Reach out for responsive assistance and updates.
+          </p>
+        </article>
+
+        <article class="glass-card">
+          <div class="card-icon">📱</div>
+          <h3>Mobile-Friendly Approach</h3>
+          <p>
+            Landing pages and campaign experiences designed
+            to work smoothly across mobile devices.
+          </p>
+        </article>
+
+        <article class="glass-card">
+          <div class="card-icon">📊</div>
+          <h3>Performance Monitoring</h3>
+          <p>
+            Review campaign metrics and identify opportunities
+            for improvement instead of relying on guesswork.
+          </p>
+        </article>
+
+        <article class="glass-card">
+          <div class="card-icon">🤝</div>
+          <h3>Personal Attention</h3>
+          <p>
+            Clear communication and practical guidance
+            tailored to your campaign requirements.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <h2>Simple. <span class="gradient-text">Professional.</span> Effective.</h2>
+        <p>A straightforward process to discuss your growth goals.</p>
+      </div>
+
+      <div class="process">
+        <div class="step">
+          <div class="step-number">STEP 01</div>
+          <h3>Connect With Us</h3>
+          <p>Send your channel details and campaign requirements.</p>
+        </div>
+
+        <div class="step">
+          <div class="step-number">STEP 02</div>
+          <h3>Discuss Your Budget</h3>
+          <p>Explore suitable pricing and campaign options.</p>
+        </div>
+
+        <div class="step">
+          <div class="step-number">STEP 03</div>
+          <h3>Plan Your Campaign</h3>
+          <p>Review the strategy, tracking and next steps together.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="cta-panel">
+        <h2>Ready to <span class="gradient-text">Grow?</span></h2>
+        <p>
+          Let's discuss your Telegram channel and find
+          a campaign approach that fits your goals and budget.
+          Message us to get started.
+        </p>
+
+        <a class="btn btn-primary"
+           href="https://t.me/+JYNE1EZKzNEwMDk1"
+           target="_blank"
+           rel="noopener noreferrer">
+          🚀 Get Started on Telegram ↗️
+        </a>
+      </div>
+    </section>
+  </main>
+ <footer>
+    <strong>SALIX MEDIA</strong><br>
+    Telegram Growth & Meta Ads Campaign Services<br>
+    © <span id="year"></span> Salix Media. All rights reserved.
+  </footer>
+
+</div>
+
+<script>
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+</script>
+</body>
+</html>
